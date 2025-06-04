@@ -4,7 +4,6 @@
 html {
     font-family: Arial, sans-serif;
     overflow-x: hidden; /* so no horizontal scrollbar */
-    height: 100%;
 }
 
 body {
@@ -13,7 +12,7 @@ body {
     flex-direction: column; /* stacks (header|main|footer|copyright) vertically */
     font-family: Arial, sans-serif;
     margin: 0; /* so header and footer cover entire width */
-    height: 100%;
+    min-height: 100vh; /* keeps footer on bottom while letting header stick on top */
 }
 
 main {
@@ -24,8 +23,10 @@ main {
 header {
   background-color: white; /* (TEMPORARY) */
   padding: 1.5rem 0;
-  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* keep it on top */
+  position: sticky;
+  top: 0;
 }
 
 nav {
@@ -57,11 +58,6 @@ header img {
 
 .nav-links a:hover {
   color: #007BFF;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
 }
 
 /* content (middle) */
