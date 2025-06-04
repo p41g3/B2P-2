@@ -1,0 +1,226 @@
+/* I want everything inside 10% horizontally like how Shopee does */
+
+/* defaults (for all) */
+html {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* so no horizontal scrollbar */
+    height: 100%;
+}
+
+body {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column; /* stacks (header|main|footer|copyright) vertically */
+    font-family: Arial, sans-serif;
+    margin: 0; /* so header and footer cover entire width */
+    height: 100%;
+}
+
+main {
+  flex: 1; /* so footer sticks to bottom of screen (by stretching middle part fully) */
+}
+
+/* header */
+header {
+  background-color: white; /* (TEMPORARY) */
+  padding: 1.5rem 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    margin: 0 10.5%; /* slightly more in than the body */
+}
+
+header img {
+  height: 55px;
+}
+
+.nav-spacer {
+  flex-grow: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #007BFF;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+/* content (middle) */
+
+/* search bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.search {
+  --padding: 15px;
+  width: clamp(20rem, -1.429rem + 57.143vw, 50rem);
+  display: flex;
+  align-items: center;
+  padding: var(--padding);
+  border-radius: 50px;
+  background: #e7e7e7;
+  transition: background 0.25s, box-shadow 0.25s;
+  margin: 0 auto;
+  position: relative;  /
+}
+
+.search input {
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  margin-left: var(--padding);
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 100%;  
+}
+
+.search:focus-within {
+  background: #f6f6f6;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.search::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.search::placeholder,
+.search-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+form {
+  position: relative;
+}
+
+/* grid of featured suppliers */
+.grid-fsp {
+  display: grid;
+  gap: 1rem; /* space between own items */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 0 10%; /* 10% from sides */
+}
+
+.grid-fsp a {
+  transition: transform 0.3s ease;
+}
+
+.grid-fsp a:hover {
+  transform: scale(1.05);
+}
+
+.grid-fsp a img {
+  width: 100%; /* so img takes full width of grid row */
+  height: auto;
+}
+
+/* footer */
+
+footer {
+  flex-shrink: 0; /* so no extra space on bottom (firefox tngina) */
+}
+
+footer a { 
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #007BFF !important;
+}
+
+footer li, p {
+  font-size: 0.875rem;
+}
+
+/* PDP */
+
+/* suppliers specific page: */
+.supplier {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.coomtainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.coontainer {
+  display: flex;
+  margin: 0 20px 20px 20px; /* no top margin */
+}
+
+.logo {
+  width: 18rem;
+  height: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.right-sectionn {
+  text-align: left;
+  margin-left: 7%;
+}
+
+.right-sectionn h1 {
+  font-size: 4rem;
+}
+
+.images-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  gap: 10px;
+  justify-content: center;
+  margin: 0px 20px 20px 20px;
+}
+
+.small-img {
+  width: 5rem;
+  height: auto;
+  border-radius: 8px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.small-img:hover {
+  transform: scale(1.1);
+}
