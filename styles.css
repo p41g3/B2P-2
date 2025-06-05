@@ -163,6 +163,26 @@ footer li, p {
   margin-top: 20px;
 }
 
+.hori { /* awful name but yeah */
+  display: flex;
+  align-items: end;
+  padding: 10px 20px;
+}
+
+.horiz { /* awful name but yeah */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.supplier-pfp {
+  width: 3rem;
+  height: auto;
+  border-radius: 8px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .coomtainer {
   display: flex;
   flex-direction: column;
@@ -189,14 +209,43 @@ footer li, p {
   transform: scale(1.05);
 }
 
+/* for version 2 of pfp: */
+
+.logo-v2 {
+  width: 22rem;
+  height: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.logo-v2:hover {
+  transform: scale(1.05);
+}
+
+/* END OF LOGO V2 */
+
 .right-sectionn {
   text-align: left;
-  margin-left: 7%;
+  margin-left: 4%;
 }
 
 .right-sectionn h1 {
   font-size: 4rem;
 }
+
+/* for version 2 of h1 (title) */
+
+.right-sectionn-v2 {
+  text-align: left;
+  margin-left: 4%;
+}
+
+.right-sectionn-v2 h1 {
+  font-size: 3.5rem;
+}
+
+/* END OF H1 V2 */
 
 .images-section {
   display: flex;
@@ -220,3 +269,25 @@ footer li, p {
 .small-img:hover {
   transform: scale(1.1);
 }
+
+/* for misc pages */
+/* making one class for multiple pages, just add if needed */
+
+.misc-text {
+  list-style-position: inside;
+  margin: 0 30%;
+}
+
+.misc-text ol > li {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.misc-text ul li {
+  list-style-type: disc;
+}
+
+.misc-text p{
+  font-size: 1rem;
+}
+
