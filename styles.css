@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    background-color: aliceblue;
+    background-color: white;
     display: flex;
     flex-direction: column; /* stacks (header|main|footer|copyright) vertically */
     font-family: Arial, sans-serif;
@@ -17,6 +17,7 @@ body {
 
 main {
   flex: 1; /* so footer sticks to bottom of screen (by stretching middle part fully) */
+  margin: 2% 10%; /* 10% from sides */
 }
 
 /* header */
@@ -32,7 +33,6 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: center;
     background: #fff;
     margin: 0 10.5%; /* slightly more in than the body */
 }
@@ -64,24 +64,25 @@ header img {
 
 /* search bar */
 .search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(200px, 50vw, 700px);
+}
+
+@media (max-width: 600px) {
+  .search-container {
+    display: none;
+  }
 }
 
 .search {
-  --padding: 15px;
-  width: clamp(20rem, -1.429rem + 57.143vw, 50rem);
   display: flex;
   align-items: center;
-  padding: var(--padding);
+  padding: 1rem;
   border-radius: 50px;
   background: #e7e7e7;
   transition: background 0.25s, box-shadow 0.25s;
-  margin: 0 auto;
-  position: relative;  /
 }
 
 .search input {
@@ -118,7 +119,6 @@ form {
   display: grid;
   gap: 1rem; /* space between own items */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin: 0 10%; /* 10% from sides */
 }
 
 .grid-fsp a {
@@ -183,10 +183,23 @@ footer li, p {
   object-fit: cover;
 }
 
+.coomtainer a {
+  color: rgb(0, 0, 255);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.coomtainer a:hover {
+  color: rgb(9, 116, 255);
+  text-decoration: underline;
+}
+
 .coomtainer {
   display: flex;
   flex-direction: column;
   background-color: #fff;
+  padding: 1rem;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -195,6 +208,12 @@ footer li, p {
 .coontainer {
   display: flex;
   margin: 0 20px 20px 20px; /* no top margin */
+}
+
+.product-description {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
 }
 
 .logo {
@@ -291,3 +310,13 @@ footer li, p {
   font-size: 1rem;
 }
 
+/* Supplier Home Page */
+.sp-hp-pfp {
+  height: 10rem;
+  width: auto;
+}
+
+/* POP-UP */
+.modal-content {
+  border-radius: 1.5rem;
+}
