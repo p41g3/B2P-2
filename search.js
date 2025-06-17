@@ -39,12 +39,3 @@ function selectInput(keyword, url) {
   resultsBox.innerHTML = '';
   window.location.href = url;
 }
-
-// Optional: Prevent double navigation if form submits on suggestion click
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent default form submission
-  const query = inputBox.value.trim();
-  if (query) {
-    window.location.href = `/search?q=${encodeURIComponent(query)}`;
-  }
-});

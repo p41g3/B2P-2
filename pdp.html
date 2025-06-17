@@ -47,20 +47,28 @@
                 </div>
             
                 <div class="coontainer">
-                    <img src="pics/steel.jpg" class="logo-v2 img-fluid" alt="Manila Hardware Logo">
-                    
+                    <!-- Main Image -->
+                    <img id="mainImage" src="pics/mh-pdp/tubes.jpg" class="logo-v2 img-fluid mb-3" alt="Manila Hardware Logo">
+
                     <!-- Text -->
                     <div class="right-sectionn-v2">
                         <h1 class="fw-bold m-0">Stainless Steel</h1>
                         <h3 class="m-0 p-0">Php 300.00/pc</h3>
+                        <hr>
+
                         <div class="d-flex mt-3">
                             <a href="#" class="me-4">Visit the Store</a>
                             <a href="#">Contact Details</a>
                         </div>
-                        <h5 class="fs-5 mb-0 mt-2">Location: Quezon City</h5>
-                        <h5 class="fs-5 mb-4">MOQ: 100 pcs</h5>
-                        <h5 class="fw-bold fs-5 pt-3 mb-0">Delivery Options:</h5>
-                        <div class="d-flex mt-2">
+
+                        <h5 class="fs-6 mb-0 mt-2"><b>Location:</b> Quezon City</h5>
+                        <h5 class="fs-6 mb-0 mt-2"><b>Available Sizes:</b> 1mm x 1000mm x 2000mm</h5>
+                        <h5 class="fs-6 mb-0 mt-2"><b>Thickness:</b> 0.4mm - 10mm</h5>
+                        <h5 class="fs-6 mb-0 mt-2"><b>Finishes:</b> 2B, BA, No.1, No.4, Mirror</h5>
+                        <h5 class="fs-6 mt-1 mb-3"><b>MOQ:</b> 100 pcs</h5>
+                        <h5 class="fs-6 fw-bold">Delivery Options:</h5>
+
+                        <div class="d-flex">
                             <a href="#" class="me-4">Long Distance</a>
                             <a href="#">Short Distance</a>
                         </div>
@@ -71,36 +79,37 @@
                 <div class="horiz">
                     <h5 class="fw-bold">Other Products From Manila Hardware</h5>
                 </div>
+
                 <div class="images-section">
-                    <img src="pics/steel.jpg" alt="steel" class="small-img">
-                    <img src="pics/steel.jpg" alt="steel" class="small-img">
-                    <img src="pics/steel.jpg" alt="steel" class="small-img">
-                    <img src="pics/steel.jpg" alt="steel" class="small-img">
-                    <img src="pics/steel.jpg" alt="steel" class="small-img">
-                    <img src="pics/steel.jpg" alt="steel" class="small-img">
-                    <img src="pics/steel.jpg" alt="steel" class="small-img">
-                    <img src="pics/steel.jpg" alt="steel" class="small-img">
-                    <img src="pics/steel.jpg" alt="steel" class="small-img">
-                    <img src="pics/steel.jpg" alt="steel" class="small-img">
+                    <img src="pics/mh-pdp/tubes.jpg" alt="steel" class="small-img">
+                    <img src="pics/mh-pdp/closeup.jpg" alt="steel" class="small-img">
+                    <img src="pics/mh-pdp/coiled.jpg" alt="steel" class="small-img">
+                    <img src="pics/mh-pdp/sheet.jpg" alt="steel" class="small-img">
+                    <img src="pics/mh-pdp/welding.png" alt="steel" class="small-img">
+                    <img src="pics/mh-pdp/tape.jpg" alt="steel" class="small-img">
+                    <img src="pics/mh-pdp/idk.jpg" alt="steel" class="small-img">
+                    <img src="pics/mh-pdp/line.jpg" alt="steel" class="small-img">
+                    <img src="pics/mh-pdp/rolled.jpg" alt="steel" class="small-img">
+                    <img src="pics/mh-pdp/closeup2.jpeg" alt="steel" class="small-img">
                 </div>
             </div>
 
             <div class="coomtainer mt-5">
-                <div class="hori">
-                    <h4 class="ms-2 fw-bold">Product Description</h4>
-                    <a href="#" class="ms-auto">Back</a>
-                </div>
-
-                <!-- fix pa -->
                 <div class="product-description">
-                    <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum iso</p>
-                    <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum iso</p>
-                    <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum iso</p>
+                    <h4 class="fw-bold">Product Description</h4>
                     <ul>
-                        <li>bading si Zo</li>
-                        <li>bading si Naguio</li>
+                        <li><h5 class="fs-6 mb-0 mt-2">Material Grade: 304, 316, 430 stainless steel variants</h5></li>
+                        <li><h5 class="fs-6 mb-0 mt-2">Corrosion Resistance: Suitable for marine, industrial, and outdoor use</h5></li>
+                        <li><h5 class="fs-6 mb-0 mt-2">Applications: Kitchen equipment, construction, automotive, fabrication</h5></li>
+                        <li><h5 class="fs-6 mb-0 mt-2">Cutting Services: Available upon request</h5></li>
+                        <li><h5 class="fs-6 mb-0 mt-2">Packaging: PVC-coated or wooden pallet as required</h5></li>
+                        <li><h5 class="fs-6 mb-0 mt-2">Country of Origin: Philippines / Imported</h5></li>
+                        <li><h5 class="fs-6 mb-0 mt-2">Care Instructions: Avoid contact with chloride; use neutral cleaners</h5></li>
+                        <li><h5 class="fs-6 mb-0 mt-2">Warranty: Manufacturer's warranty applicable</h5></li>
+                        <li><h5 class="fs-6 mb-0 mt-2">Shipping Information: Lead time 3-5 business days within Metro Manila</h5></li>
                     </ul>
                 </div>
+            </div>
               
     </main>
 
@@ -149,6 +158,22 @@
             </div>
         </div>
     </footer> 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mainImage = document.getElementById("mainImage");
+            const thumbnails = document.querySelectorAll(".small-img");
+
+            if (mainImage && thumbnails.length > 0) {
+                thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener("click", function () {
+                    mainImage.src = this.src;
+                });
+                });
+            }
+            });
+    </script>
+
 </body>
 
 </html>

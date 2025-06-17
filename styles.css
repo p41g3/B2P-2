@@ -183,15 +183,15 @@ footer li, p {
   object-fit: cover;
 }
 
-.coomtainer a {
-  color: rgb(0, 0, 255);
+.coontainer a {
+  color: rgb(9, 116, 255);
   text-decoration: none;
   transition: color 0.3s ease;
   font-weight: bold;
 }
 
-.coomtainer a:hover {
-  color: rgb(9, 116, 255);
+.coontainer a:hover {
+  color: rgb(0, 0, 255);
   text-decoration: underline;
 }
 
@@ -203,6 +203,18 @@ footer li, p {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: 51vw;
+}
+
+.hori a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.hori a:hover {
+  color: rgb(9, 116, 255);
 }
 
 .coontainer {
@@ -234,12 +246,7 @@ footer li, p {
   width: 22rem;
   height: auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
   border-radius: 10px;
-}
-
-.logo-v2:hover {
-  transform: scale(1.05);
 }
 
 /* END OF LOGO V2 */
@@ -287,6 +294,7 @@ footer li, p {
 
 .small-img:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* for misc pages */
