@@ -132,6 +132,27 @@ form {
 .grid-fsp a img {
   width: 100%; /* so img takes full width of grid row */
   height: auto;
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+
+.grid-fspp {
+  display: grid;
+  gap: 1rem; /* space between own items */
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+}
+
+.grid-fspp a {
+  transition: transform 0.3s ease;
+}
+
+.grid-fspp a:hover {
+  transform: scale(1.05);
+}
+
+.grid-fspp a img {
+  width: 100%; /* so img takes full width of grid row */
+  height: auto;
 }
 
 /* footer */
