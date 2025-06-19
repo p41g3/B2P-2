@@ -39,10 +39,31 @@
     </header>
 
     <main>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center position-relative">
+                        <h2 class="modal-title fw-bold" id="exampleModalLabel">Manila Hardware</h2>
+                        <button type="button" class="btn-close position-absolute end-0 top-50 translate-middle-y me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                <div class="modal-body text-center">
+                    <p class="fs-4 mb-2">Industrial Supply</p>
+                    <p class="fs-4 mb-2">7 B2Pinoy Street, Manila</p>
+                    <p class="fs-4 mb-2">0988 888 8888</p>
+                    <p class="fs-4 mb-2">manilahardware@gmail.com</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
         <div class="supplier">
             <div class="coomtainer">
                 <div class="hori">
-                    <a href="manila-hardware.html"><img src="pics/mh-logo.png" alt="pfp "class="supplier-pfp rounded-circle"></a>
+                    <a href="manila-hardware.html"><img src="pics/mh-logo.png" alt="pfp "class="supplier-pfp rounded-circle img-fluid"></a>
                     <a href="manila-hardware.html"><h4 class="ms-2">Manila Hardware</h4></a>
                 </div>
             
@@ -58,20 +79,15 @@
 
                         <div class="d-flex mt-3">
                             <a href="manila-hardware.html" class="me-4">Visit the Store</a>
-                            <a href="#">Contact Details</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Details</a>
                         </div>
 
-                        <h5 class="fs-6 mb-0 mt-2"><b>Location:</b> Quezon City</h5>
-                        <h5 class="fs-6 mb-0 mt-2"><b>Available Sizes:</b> 1mm x 1000mm x 2000mm</h5>
-                        <h5 class="fs-6 mb-0 mt-2"><b>Thickness:</b> 0.4mm - 10mm</h5>
-                        <h5 class="fs-6 mb-0 mt-2"><b>Finishes:</b> 2B, BA, No.1, No.4, Mirror</h5>
-                        <h5 class="fs-6 mb-2 mt-2"><b>MOQ:</b> 100 pcs</h5>
-                        <h5 class="fs-6 fw-bold">Delivery Options:</h5>
-
-                        <div class="d-flex">
-                            <a href="#" class="me-4">Long Distance</a>
-                            <a href="#">Short Distance</a>
-                        </div>
+                        <h5 class="fs-6 mt-3"><b>Location:</b> Quezon City</h5>
+                        <h5 class="fs-6 mt-3"><b>Available Sizes:</b> 1mm x 1000mm x 2000mm</h5>
+                        <h5 class="fs-6 mt-3"><b>Thickness:</b> 0.4mm - 10mm</h5>
+                        <h5 class="fs-6 mt-3"><b>Finishes:</b> 2B, BA, No.1, No.4, Mirror</h5>
+                        <h5 class="fs-6 mt-3"><b>MOQ:</b> 100 pcs</h5>
+                        <h5 class="fs-6 mt-3"><b>Delivery Options:</b> Long Distance, Short Distance</h5>
                     </div>
                 </div>
 
@@ -95,20 +111,18 @@
             </div>
 
             <div class="coomtainer mt-5">
-                <div class="product-description">
                     <h4 class="fw-bold">Product Description</h4>
                     <ul>
-                        <li><h5 class="fs-6 mb-0 mt-2">Material Grade: 304, 316, 430 stainless steel variants</h5></li>
-                        <li><h5 class="fs-6 mb-0 mt-2">Corrosion Resistance: Suitable for marine, industrial, and outdoor use</h5></li>
-                        <li><h5 class="fs-6 mb-0 mt-2">Applications: Kitchen equipment, construction, automotive, fabrication</h5></li>
-                        <li><h5 class="fs-6 mb-0 mt-2">Cutting Services: Available upon request</h5></li>
-                        <li><h5 class="fs-6 mb-0 mt-2">Packaging: PVC-coated or wooden pallet as required</h5></li>
-                        <li><h5 class="fs-6 mb-0 mt-2">Country of Origin: Philippines / Imported</h5></li>
-                        <li><h5 class="fs-6 mb-0 mt-2">Care Instructions: Avoid contact with chloride; use neutral cleaners</h5></li>
-                        <li><h5 class="fs-6 mb-0 mt-2">Warranty: Manufacturer's warranty applicable</h5></li>
-                        <li><h5 class="fs-6 mb-0 mt-2">Shipping Information: Lead time 3-5 business days within Metro Manila</h5></li>
+                        <li><h5 class="fs-6 mt-2">Material Grade: 304, 316, 430 stainless steel variants</h5></li>
+                        <li><h5 class="fs-6 mt-2">Corrosion Resistance: Suitable for marine, industrial, and outdoor use</h5></li>
+                        <li><h5 class="fs-6 mt-2">Applications: Kitchen equipment, construction, automotive, fabrication</h5></li>
+                        <li><h5 class="fs-6 mt-2">Cutting Services: Available upon request</h5></li>
+                        <li><h5 class="fs-6 mt-2">Packaging: PVC-coated or wooden pallet as required</h5></li>
+                        <li><h5 class="fs-6 mt-2">Country of Origin: Philippines / Imported</h5></li>
+                        <li><h5 class="fs-6 mt-2">Care Instructions: Avoid contact with chloride; use neutral cleaners</h5></li>
+                        <li><h5 class="fs-6 mt-2">Warranty: Manufacturer's warranty applicable</h5></li>
+                        <li><h5 class="fs-6 mt-2">Shipping Information: Lead time 3-5 business days within Metro Manila</h5></li>
                     </ul>
-                </div>
             </div>
               
     </main>
@@ -173,6 +187,7 @@
             }
             });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
 </body>
 
