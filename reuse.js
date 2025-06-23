@@ -27,7 +27,7 @@ class MainHeader extends HTMLElement {
                     <div class="nav-links">
                         <a href="#">About Us</a>
                         <a href="#">FAQs</a>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1">Customer Support</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#customerSupport">Customer Support</a>
                     </div>
                 </nav>
             </header>
