@@ -280,6 +280,7 @@ footer li, p {
 
 .misc-text p{
   font-size: 1rem;
+  text-align: justify;
 }
 
 /* Supplier Home Page */
