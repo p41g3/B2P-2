@@ -101,9 +101,9 @@ class Footer extends HTMLElement {
                         <div class="col">
                             <h6 class="fw-bold mb-3">Careers</h6>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Be a Supplier!</a></li>
-                                <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Promote your Service!</a></li>
-                                <li><a href="#" class="text-decoration-none text-dark">List your Franchise!</a></li>
+                                <li class="mb-2"><a href="forms.html" class="text-decoration-none text-dark">Be a Supplier!</a></li>
+                                <li class="mb-2"><a href="forms.html" class="text-decoration-none text-dark">Promote your Service!</a></li>
+                                <li><a href="forms.html" class="text-decoration-none text-dark">List your Franchise!</a></li>
                             </ul>
                         </div>
                         <div class="col">
