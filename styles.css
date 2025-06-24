@@ -17,7 +17,7 @@ body {
 
 main {
   flex: 1; /* so footer sticks to bottom of screen (by stretching middle part fully) */
-  margin: 2% 10%; /* 10% from sides */
+  margin: 1.5% 10%; /* 10% from sides */
 }
 
 /* header */
@@ -169,9 +169,9 @@ footer li, p {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 65%;
   height: fit-content;
   box-sizing: border-box;
@@ -296,10 +296,8 @@ footer li, p {
 
 /* SEARCH BAR */
 .search-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .search {

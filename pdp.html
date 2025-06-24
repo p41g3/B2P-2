@@ -11,7 +11,7 @@
 
 <body>
 
-    <search-header></search-header>
+    <main-header></main-header>
 
     <main>
 
@@ -38,9 +38,20 @@
             </div>
         </div>
 
+        <!-- Search Bar -->
+        <div class="search-container" style="margin-bottom: 1.5%;">
+            <form id="search-form" action="results.html" method="get">
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" name="search" placeholder="e.g. Construction, Apparel, Beverage, etc.">
+                    <ul id="suggestions-list"></ul>
+                </div>
+            </form>
+        </div>
+
         <div class="supplier">
             <div class="coomtainer">
-                <div class="hori">
+                <div class="hori mb-3">
                     <a href="manila-hardware.html"><img src="pics/mh-logo.png" alt="pfp "class="supplier-pfp rounded-circle img-fluid"></a>
                     <a href="manila-hardware.html"><h4 class="ms-2">Manila Hardware</h4></a>
                 </div>
@@ -101,8 +112,7 @@
                         <li><h5 class="fs-6 mt-2">Warranty: Manufacturer's warranty applicable</h5></li>
                         <li><h5 class="fs-6 mt-2">Shipping Information: Lead time 3-5 business days within Metro Manila</h5></li>
                     </ul>
-            </div>
-              
+            </div>              
     </main>
 
     <b2p-footer></b2p-footer>
