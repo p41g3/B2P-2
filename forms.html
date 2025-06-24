@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>B2Pinoy Supplier Onboarding Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f8f8f8; }
+    form { background: white; padding: 40px; border-radius: 10px; max-width: 800px; margin: auto; }
+    .form-group { margin-bottom: 24px; }
+    .form-label { font-weight: bold; display: block; margin-bottom: 6px; font-size: 0.95em; }
+    .form-input, .form-select, .form-textarea, .form-file {
+      width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.9em;
+    }
+    .form-textarea { margin-bottom: 12px; min-height: 80px; }
+    .form-file { margin-bottom: 12px; }
+    .form-input, .form-select { margin-bottom: 12px; }
+    button { margin-top: 20px; padding: 10px 20px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9em; }
+    button:hover { background: #0056b3; }
+    .hidden { display: none; }
+    h2, h3 { margin-top: 32px; margin-bottom: 16px; }
+  </style>
+  <script>
+    function toggleOtherInput(selectId, otherInputId) {
+      const select = document.getElementById(selectId);
+      const otherInput = document.getElementById(otherInputId);
+      if (select.value === "Other") {
+        otherInput.classList.remove("hidden");
+      } else {
+        otherInput.classList.add("hidden");
+      }
+    }
+
+    function addProductSection() {
+      const container = document.getElementById("product-listings");
+      const index = container.children.length + 1;
+      const div = document.createElement("div");
+      div.classList.add("form-group");
+      div.innerHTML = `
+        <hr>
+        <h3>Product #${index}</h3>
+        <label class="form-label">Product Name</label>
+        <input class="form-input" type="text" name="product_name_${index}" required>
+
+        <label class="form-label">Product Category</label>
+        <select class="form-select" name="product_category_${index}" id="product_category_${index}" onchange="toggleOtherInput('product_category_${index}', 'product_category_other_${index}')" required>
+          <option value="">Select Category</option>
+          <option value="Meat">Meat</option>
+          <option value="Packaging">Packaging</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Other">Other</option>
+        </select>
+        <input class="form-input hidden" type="text" name="product_category_other_${index}" id="product_category_other_${index}" placeholder="Please specify" />
+
+        <label class="form-label">Product Price Per Unit</label>
+        <input class="form-input" type="text" name="product_price_${index}" required>
+
+        <label class="form-label">Product Description</label>
+        <textarea class="form-textarea" name="product_description_${index}" required></textarea>
+
+        <label class="form-label">MOQ (if applicable)</label>
+        <input class="form-input" type="text" name="product_moq_${index}">
+
+        <label class="form-label">Upload Product Image</label>
+        <input class="form-file" type="file" name="product_image_${index}" accept="image/*">
+      `;
+      container.appendChild(div);
+    }
+  </script>
+  <script src="reuse.js"></script>
+  <script src="search.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <main-head></main-head>
+</head>
+<body>
+  <main-header></main-header>
+  
+  <form action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data">
+    <h2>B2Pinoy Supplier Onboarding Form</h2>
+
+    <h3>1. About the Business</h3>
+    <div class="form-group">
+      <label class="form-label">Business Name*</label>
+      <input class="form-input" type="text" name="business_name" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Business Location (to be shown on website)*</label>
+      <input class="form-input" type="text" name="business_location" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Contact Person*</label>
+      <input class="form-input" type="text" name="contact_person" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Contact Number*</label>
+      <input class="form-input" type="text" name="contact_number" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email Address*</label>
+      <input class="form-input" type="email" name="email" required>
+    </div>
+
+    <h3>2. For the Website</h3>
+    <div class="form-group">
+      <label class="form-label">Business Type*</label>
+      <select class="form-select" name="business_type" id="business_type" onchange="toggleOtherInput('business_type', 'business_type_other')" required>
+        <option value="">Select Type</option>
+        <option value="Manufacturer">Manufacturer</option>
+        <option value="Wholesaler">Wholesaler</option>
+        <option value="Distributor">Distributor</option>
+        <option value="Retailer">Retailer</option>
+        <option value="Other">Other</option>
+      </select>
+      <input class="form-input hidden" type="text" name="business_type_other" id="business_type_other" placeholder="Please specify" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Business Industry*</label>
+      <input class="form-input" type="text" name="business_industry" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Business Contact Number*</label>
+      <input class="form-input" type="text" name="website_contact_number" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Business Email*</label>
+      <input class="form-input" type="email" name="website_email" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Business Social Media</label>
+      <input class="form-input" type="text" name="social_media">
+    </div>
+
+    <h3>3. Product Listing</h3>
+    <div id="product-listings">
+      <div class="form-group">
+        <label class="form-label">Product Name</label>
+        <input class="form-input" type="text" name="product_name_1" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Product Category</label>
+        <select class="form-select" name="product_category_1" id="product_category_1" onchange="toggleOtherInput('product_category_1', 'product_category_other_1')" required>
+          <option value="">Select Category</option>
+          <option value="Meat">Meat</option>
+          <option value="Packaging">Packaging</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Other">Other</option>
+        </select>
+        <input class="form-input hidden" type="text" name="product_category_other_1" id="product_category_other_1" placeholder="Please specify" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Product Price Per Unit</label>
+        <input class="form-input" type="text" name="product_price_1" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Product Description</label>
+        <textarea class="form-textarea" name="product_description_1" required></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">MOQ (if applicable)</label>
+        <input class="form-input" type="text" name="product_moq_1">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Upload Product Image</label>
+        <input class="form-file" type="file" name="product_image_1" accept="image/*">
+      </div>
+    </div>
+
+    <button type="button" onclick="addProductSection()">+ Add Another Product</button>
+
+    <h3>4. Subscription Type</h3>
+    <div class="form-group">
+      <label class="form-label">Choose your subscription*</label>
+      <select class="form-select" name="subscription_type" required>
+        <option value="">Select Plan</option>
+        <option value="Basic Listing">Basic Listing</option>
+        <option value="Premium Listing">Premium Listing</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>
+        <input type="checkbox" name="consent" required>
+        I agree to B2Pinoy’s Terms and authorize listing of my business.
+      </label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <b2p-footer></b2p-footer>
+</body>
+</html>
