@@ -82,7 +82,13 @@ nav {
 .grid-fsp {
   display: grid;
   gap: 1rem; /* space between own items */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 992px)  { 
+  .grid-fsp {
+  grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .grid-fsp a {
