@@ -22,12 +22,24 @@ main {
 
 /* header */
 header {
-  background-color: white; /* (TEMPORARY) */
+  background-color: white;
   padding: 1.5rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* keep it on top */
+  z-index: 1000;
   position: sticky;
   top: 0;
+}
+
+header img {
+  width: 9.5rem;
+  height: auto;
+}
+
+@media (max-width: 568px) {
+  header img {
+    width: clamp(3rem, -3.45rem + 32.25vw, 8rem);
+    height: auto;
+  }
 }
 
 nav {
@@ -39,23 +51,25 @@ nav {
     margin: 0 10.5%; /* slightly more in than the body */
 }
 
-header img {
-  height: 55px;
-}
-
 .nav-spacer {
   flex-grow: 1;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: clamp(0.25rem, -0.33rem + 2.91vw, 2rem);
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-size: 1rem;
+}
+
+@media (max-width: 568px) {
+  .nav-links a {
+    font-size: 0.75rem;
+  }
 }
 
 .nav-links a:hover {
@@ -111,6 +125,13 @@ footer {
   flex-shrink: 0; /* so no extra space on bottom (firefox tngina) */
 }
 
+@media (max-width: 992px) {
+  .row {
+    justify-content: center;
+    text-align: center;
+   }
+ }
+
 footer a { 
   transition: color 0.3s ease;
 }
@@ -121,6 +142,13 @@ footer a:hover {
 
 footer li, p {
   font-size: 0.875rem;
+}
+
+@media (max-width: 992px) {
+  .footer-brand,
+  .footer-social {
+    justify-content: center !important;
+  }
 }
 
 /* PDP */
@@ -370,4 +398,21 @@ form {
 
 #suggestions-list li:hover {
   background-color: #f1f1f1;
+}
+
+/* back button (from original) */
+.back-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #555;
 }

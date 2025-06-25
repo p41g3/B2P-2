@@ -78,19 +78,21 @@ class Footer extends HTMLElement {
             <footer class="bg-white">
                 <div class="container" style="max-width: 80%; margin: 0 auto;">
                     <hr>
-                    <div class="mt-4 mb-3 row">
-                        <div class="col">
-                            <div class="d-flex justify-content-center">
-                                <a href="index.html"><img src="pics/b2p.png" class="img-fluid" style="height: 3.5rem;" alt="Logo"></a>
+                    <div class="mt-3 mb-3 row">
+                        <div class="col-12 col-sm-6 col-lg-3 mt-2">
+                            <div class="footer-brand d-flex justify-content-center">
+                                <a href="index.html">
+                                    <img src="pics/b2p.png" class="img-fluid" style="height: 3.5rem;" alt="Logo">
+                                </a>
                             </div>
-                            <div class="d-flex justify-content-center">
+                            <div class="footer-social d-flex justify-content-center mb-3">
                                 <a href="#" class="text-decoration-none text-dark"><i class="bi bi-instagram fs-5 me-3"></i></a>
                                 <a href="https://www.facebook.com/profile.php?id=61570464069710" class="text-decoration-none text-dark"><i class="bi bi-facebook fs-5 me-3"></i></a>
                                 <a href="https://x.com/B2Pinoy" class="text-decoration-none text-dark"><i class="bi bi-twitter fs-5 me-3"></i></a>
                                 <a href="#" class="text-decoration-none text-dark"><i class="bi bi-linkedin fs-5 me-3"></i></a>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-12 col-sm-6 col-lg-3 mt-2">
                             <h6 class="fw-bold mb-3">Customer Support</h6>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Contact Us</a></li>
@@ -98,7 +100,7 @@ class Footer extends HTMLElement {
                                 <li><a href="#" class="text-decoration-none text-dark">Help Center</a></li>
                             </ul>
                         </div>
-                        <div class="col">
+                        <div class="col-12 col-sm-6 col-lg-3 mt-2">
                             <h6 class="fw-bold mb-3">Careers</h6>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><a href="forms.html" class="text-decoration-none text-dark">Be a Supplier!</a></li>
@@ -106,7 +108,7 @@ class Footer extends HTMLElement {
                                 <li><a href="forms.html" class="text-decoration-none text-dark">List your Franchise!</a></li>
                             </ul>
                         </div>
-                        <div class="col">
+                        <div class="col-12 col-sm-6 col-lg-3 mt-2">
                             <h6 class="fw-bold mb-3">About B2Pinoy</h6>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><a href="#" class="text-decoration-none text-dark">About Us</a></li>
