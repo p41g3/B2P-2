@@ -68,7 +68,7 @@ nav {
 
 @media (max-width: 568px) {
   .nav-links a {
-    font-size: 0.75rem;
+  font-size: clamp(0.5rem, 0.17rem + 1.61vw, 0.75rem);
   }
 }
 
