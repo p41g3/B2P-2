@@ -17,7 +17,8 @@ body {
 
 main {
   flex: 1; /* so footer sticks to bottom of screen (by stretching middle part fully) */
-  margin: 1.5% 10%; /* 10% from sides */
+  margin-inline: 10%; /* 10% from sides */
+  margin-block: clamp(1rem, 0.66rem + 1.66vw, 2rem);
 }
 
 /* header */
@@ -35,9 +36,9 @@ header img {
   height: auto;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 720px) {
   header img {
-    width: clamp(3rem, -3.45rem + 32.25vw, 8rem);
+    width: clamp(3.5rem,18vw, 8rem);
     height: auto;
   }
 }
@@ -48,7 +49,7 @@ nav {
     justify-content: space-between;
     background: #fff;
     position: relative; /* for absolute positioning the search bar */
-    margin: 0 10.5%; /* slightly more in than the body */
+    margin-inline: 10.5%; /* slightly more in than the body */
 }
 
 .nav-spacer {
@@ -57,7 +58,7 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: clamp(0.25rem, -0.33rem + 2.91vw, 2rem);
+  gap: clamp(0.4rem, -1.66rem + 10.32vw, 2rem);
 }
 
 .nav-links a {
@@ -66,9 +67,9 @@ nav {
   font-size: 1rem;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 720px) {
   .nav-links a {
-  font-size: clamp(0.5rem, 0.17rem + 1.61vw, 0.75rem);
+  font-size: clamp(0.7rem, 0.55rem + 0.8vw, 0.9rem);
   }
 }
 
