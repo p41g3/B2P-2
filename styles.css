@@ -1,4 +1,25 @@
-/* TESTING */
+/* defaults (for all) */
+html {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* so no horizontal scrollbar */
+}
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* stacks (header|main|footer|copyright) vertically */
+    font-family: Arial, sans-serif;
+    margin: 0; /* so header and footer cover entire width */
+    min-height: 100vh; /* keeps footer on bottom while letting header stick on top */
+}
+
+main {
+  flex: 1; /* so footer sticks to bottom of screen (by stretching middle part fully) */
+  margin-inline: clamp(1rem, -1.20rem + 11vw, 12rem); /* ~10% from sides */
+  margin-block: clamp(1rem, -1.2rem + 11vw, 12rem);
+}
+
+/* DEFAULT FONT SIZES */
 h1 {
   font-size: 1rem;
   font-size: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
@@ -25,33 +46,11 @@ h5 {
 }
 
 h6, p {
-  font-size: 0.5rem;
   font-size: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: clamp(0.1875rem, 0.125rem + 0.3125vw, 0.5rem);
-}
-
-/* defaults (for all) */
-html {
-    font-family: Arial, sans-serif;
-    overflow-x: hidden; /* so no horizontal scrollbar */
-}
-
-body {
-    background-color: white;
-    display: flex;
-    flex-direction: column; /* stacks (header|main|footer|copyright) vertically */
-    font-family: Arial, sans-serif;
-    margin: 0; /* so header and footer cover entire width */
-    min-height: 100vh; /* keeps footer on bottom while letting header stick on top */
-}
-
-main {
-  flex: 1; /* so footer sticks to bottom of screen (by stretching middle part fully) */
-  margin-inline: 10%; /* 10% from sides */
-  margin-block: clamp(1rem, 0.66rem + 1.66vw, 2rem);
 }
 
 /* header */
@@ -82,7 +81,7 @@ nav {
     justify-content: space-between;
     background: #fff;
     position: relative; /* for absolute positioning the search bar */
-    margin-inline: 10.5%; /* slightly more in than the body */
+    margin-inline: clamp(1.5rem, -0.7rem + 11vw, 12.5rem); /* slightly more in than the body */
 }
 
 .nav-spacer {
@@ -122,13 +121,13 @@ nav {
 
 @media (max-width: 1200px)  { 
   .grid-fsp {
-  grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 720px)  { 
   .grid-fsp {
-  grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -177,6 +176,10 @@ footer a:hover {
 
 footer li, p {
   font-size: 0.875rem;
+}
+
+footer h6 {
+  font-size: 1rem !important;
 }
 
 @media (max-width: 992px) {
