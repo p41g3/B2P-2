@@ -134,20 +134,21 @@ class CSModal extends HTMLElement {
         this.innerHTML = `
             <!-- Modal -->
             <div class="modal fade" id="customerSupport" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-dialog modal-dialog-centered responsive-modal">
                     <div class="modal-content">
                         <div class="modal-header justify-content-center position-relative">
                             <h1 class="modal-title fw-bold m-auto" id="exampleModalLabel">Questions?</h1>
-                            <button type="button" class="btn-close position-absolute end-0 top-50 translate-middle-y me-3" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                    <div class="modal-body text-center mt-3">
-                        <h2><b>Listing Inquiries</b></h2>
-                        <p class="fs-5"><u>sales.b2pinoy@gmail.com</u></p>
-                        <h2 class="mt-4"><b>Customer Support</b></h2>
-                        <p class="fs-5"><u>cs.b2pinoy@gmail.com</u></p>
+                    <div class="modal-body text-center">
+                        <div class="container-fluid">
+                            <h2><b>Listing Inquiries</b></h2>
+                            <p><u>sales.b2pinoy@gmail.com</u></p>
+                            <h2 style="margin-top: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);"><b>Customer Support</b></h2>
+                            <p><u>cs.b2pinoy@gmail.com</u></p>
+                        </div>    
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary responsive-close-btn" data-bs-dismiss="modal">Close</button>
                     </div>
                     </div>
                 </div>
