@@ -16,7 +16,7 @@ body {
 main {
   flex: 1; /* so footer sticks to bottom of screen (by stretching middle part fully) */
   margin-inline: clamp(1rem, -1.20rem + 11vw, 12rem); /* ~10% from sides */
-  margin-block: clamp(1rem, -1.2rem + 11vw, 12rem);
+  margin-block: clamp(1rem, 0.8rem + 1vw, 2rem);
 }
 
 /* DEFAULT FONT SIZES */
@@ -357,10 +357,34 @@ footer h6 {
 }
 
 /* Supplier Home Page */
+
 .sp-hp-pfp {
-  height: clamp(6rem, 4.6rem + 7vw, 13rem);
+  height: clamp(4.5rem, 2.8rem + 8.5vw, 13rem);;
   width: auto;
 }
+
+.mh-top h1 {
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.4rem + 1.75vw, 2.5rem);
+}
+
+.mh-top h5 {
+  font-size: 0.45rem;
+  font-size: clamp(0.45rem, 0.29rem + 0.8vw, 1.25rem);
+}
+
+.mh-wrapper {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+
+@media (max-width: 450px) {
+  .mh-wrapper {
+    justify-content: center;
+  }
+}
+
 
 /* POP-UP */
 .modal-content {
