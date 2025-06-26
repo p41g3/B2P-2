@@ -379,13 +379,6 @@ footer h6 {
   width: 100%;
 }
 
-@media (max-width: 450px) {
-  .mh-wrapper {
-    justify-content: center;
-  }
-}
-
-
 /* POP-UP */
 .modal-content {
   border-radius: 1.5rem;
