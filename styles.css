@@ -356,31 +356,29 @@ footer h6 {
     margin-bottom: 2rem;
   }
 
-  .logo-v2 {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 750px) {
   .coomtainer h1 {
-    font-size: 3.5rem;
+    font-size: clamp(1.5rem, 0.0185185185185186rem + 7.4074074074074066vw, 3.5rem);
   }
 
   .coomtainer h3 {
-    font-size: 1.75rem;
+    font-size: clamp(0.8rem, 0.09629629629629644rem + 3.518518518518518vw, 1.75rem);
   }
 
   .coomtainer h4 {
-    font-size: 1.5rem;
+    font-size: clamp(0.7rem, 0.1074074074074074rem + 2.9629629629629632vw, 1.5rem);
   }
 
   .coomtainer h5 {
-    font-size: 1.25rem;
+    font-size: clamp(0.6rem, 0.11851851851851847rem + 2.4074074074074074vw, 1.25rem);
   }
 
   .coomtainer p {
-    font-size: 1rem;
+    font-size: clamp(0.5rem, 0.12962962962962965rem + 1.8518518518518516vw, 1rem);
+  }
+
+  .logo-v2 {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 
