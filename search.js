@@ -4,12 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const data = [
     { name: "Stainless Steel", link: "pdp.html", category: "supplier" },
     { name: "Manila Hardware", link: "manila-hardware.html", category: "supplier" },
-    { name: "Jollibee", link: "#", category: "franchise" },
-    { name: "Potato Corner", link: "#", category: "franchise" },
-    { name: "Siomai King", link: "#", category: "franchise" },
-    { name: "Ilao Ilao", link: "#", category: "franchise" },
-    { name: "Dream Space", link: "#", category: "service" },
-    { name: "Automotive Detailing", link: "#", category: "service" },
   ];
   
 
