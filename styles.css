@@ -350,14 +350,14 @@ footer h6 {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 720px) {
    .coontainer {
     flex-direction: column;
     margin-bottom: 2rem;
   }
 
   .coomtainer h1 {
-    font-size: clamp(1.5rem, 0.0185185185185186rem + 7.4074074074074066vw, 3.5rem);
+    font-size: clamp(2rem, 0.8rem + 6vw, 3.5rem);
   }
 
   .coomtainer h3 {
@@ -391,15 +391,9 @@ footer h6 {
   /* outline: 1px solid purple; */
 }
 
-@media (max-width: 750px)  { 
+@media (max-width: 600px)  { 
   .images-section {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 500px)  { 
-  .images-section {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
