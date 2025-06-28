@@ -2,8 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const data = [
-    { name: "Stainless Steel", link: "pdp.html", category: "supplier" },
-    { name: "Manila Hardware", link: "manila-hardware.html", category: "supplier" },
+    { name: "Stainless Steel", link: "results-ss.html", category: "supplier" },
+    { name: "Manila Hardware", link: "results-mh.html", category: "supplier" },
   ];
   
 
